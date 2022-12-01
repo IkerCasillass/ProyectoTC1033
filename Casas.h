@@ -32,8 +32,12 @@ class Casa{
         std::string getubicacion();
 
         //Metodos propios
-        void mostrarDatos();
-        void marcarFavorito();
+        void mostrarDatos(); //Muestra la informacion de la casa
+        void marcarFavorito(); 
+        void Vr360(); //Funcion de casa en realidad virtual
+        void contactarDueno(); //Ponerse en contacto con el dueño
+        void solicitarVisita(); //Solicitar visita guiada
+        void mostrarMapa(); //Mostrar la ubicacion de la casa en un mapa
 
 
 
@@ -52,7 +56,7 @@ class Casa{
 
 };
 
-class Boton{
+class Boton: public Casa{ //Se crean los botones que contienen la informacion de las casas
     public:
         Boton();
         Boton(std::string, std::string, std::string);
@@ -60,16 +64,21 @@ class Boton{
 
     protected:
         std::string nombre;
-        std::string color;
-        std::string url_icono;
+        Casa info;
 };
 
 class Pagina{
     public:
+    //Constructores
+    Pagina();
+    Pagina(Boton);
 
+    //Metodos
+    void mostrarPagina();
+    Pagina cambiarPagina(); //Cambia el numero de pagina y regresa los datos de la pagina siguiente para que se pueda mostrar
 
 
 
     private:
-        Casa Casas[10]; //Se muestran 10 casas por cada pagina del sitio web
+        Boton Casas[10]; //Se muestran 10 casas por cada pagina del sitio web
 };
