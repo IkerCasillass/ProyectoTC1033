@@ -58,7 +58,7 @@ class Casa{
 
 };
 
-class Boton: public Casa{ //Se crean los botones que contienen la informacion de las casas
+class Boton{ //Se crean los botones que contienen la informacion de las casas
     public:
         Boton();
         Boton(std::string, std::string);
