@@ -1,4 +1,6 @@
 //Header file de Casas
+//Equipo 8
+
 #include<iostream>
 
 class Casa{
