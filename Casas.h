@@ -71,13 +71,13 @@ class Boton{ //Se crean los botones que contienen la informacion de las casas
 
 class Pagina{
     public:
-    //Constructores
-    Pagina();
-    Pagina(Boton);
+        //Constructores
+        Pagina();
+        Pagina(Boton);
 
-    //Metodos
-    void mostrarPagina();
-    Pagina cambiarPagina(); //Cambia el numero de pagina y regresa los datos de la pagina siguiente para que se pueda mostrar
+        //Metodos
+        void mostrarPagina();
+        Pagina cambiarPagina(); //Cambia el numero de pagina y regresa los datos de la pagina siguiente para que se pueda mostrar
 
 
 
