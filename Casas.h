@@ -59,7 +59,7 @@ class Casa{
 class Boton: public Casa{ //Se crean los botones que contienen la informacion de las casas
     public:
         Boton();
-        Boton(std::string, std::string, std::string);
+        Boton(std::string, std::string);
         void click();
 
     protected:
@@ -80,5 +80,5 @@ class Pagina{
 
 
     private:
-        Boton Casas[10]; //Se muestran 10 casas por cada pagina del sitio web
+        Boton casas[10]; //Se muestran 10 casas por cada pagina del sitio web
 };
