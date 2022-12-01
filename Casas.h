@@ -18,6 +18,23 @@ class Casa{
         void setMeters(int);
         void setAntiguedad(int);
         void setUbicacion(std::string);
+        
+        //Getters
+        std::string getUrl();
+        std::string getTitulo();
+        int getPrecio();
+        int getHabitaciones();
+        int getEstacionamiento();
+        int getNbathroom();
+        std::string getColor();
+        int getMeters();
+        int getAntiguedad();
+        std::string getubicacion();
+
+        //Metodos propios
+        void mostrarDatos();
+        void marcarFavorito();
+
 
 
 
@@ -35,6 +52,18 @@ class Casa{
 
 };
 
+class Boton{
+    public:
+        Boton();
+        Boton(std::string, std::string, std::string);
+        void click();
+
+    protected:
+        std::string nombre;
+        std::string color;
+        std::string url_icono;
+};
+
 class Pagina{
     public:
 
@@ -42,5 +71,5 @@ class Pagina{
 
 
     private:
-        Casa Casa1;
+        Casa Casas[10]; //Se muestran 10 casas por cada pagina del sitio web
 };
